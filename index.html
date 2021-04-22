@@ -1,25 +1,55 @@
+<!-- TODO: add HTML content to your profile -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/63cc736e51.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/63cc736e51.js" crossorigin="anonymous"></script>
     <title>Alex Beet</title>
   </head>
   <body>
-    <h1>Hello, I'm Alex Beet🤓</h1>
-    <img src="images/profile.jpg" alt="This is Alex">
-    <p>I'm a computer programmer. 👨🏻‍💻
-    I love skiing ⛷ and playing videogames. 🎮.
-    I am currently honing my skills at LeWagon.</p>
-    <a href="https://www.lewagon.com" class="btn-blue">Find out more here! 🚀</a>
-    <ul>
-      <li><a href="#"><i class="fab fa-github"></i></a></li>
-      <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-    </ul>
+    <div class="container">
+      <div class="card-white text-center">
+        <h1>Hello, I'm Alex Beet! 🤓</h1>
+
+        <img src="images/profile.jpg" alt="profile picture" class="img-circle">
+
+        <p>I love coding (even though I am still learning.)
+        I love skiing ⛷ and playing videogames. 🎮.
+        I am a student at LeWagon.</p>
+
+        <a href="https://www.lewagon.com" class="btn-blue btn-animation">Find out more here! 🚀</a>
+      </div>
+
+      <div class="flex-box">
+        <div class="card-center text-center coding">
+          <h2>Coding👨🏻‍💻</h2>
+          <p>I will be passionate about <strong>coding!</strong></p>
+        </div>
+
+        <div class="card-center text-center ski">
+          <h2>Skiing⛷</h2>
+          <p>I am passionate about <strong>Skiing!</strong></p>
+        </div>
+
+        <div class="card-center text-center game">
+          <h2>Games🎮</h2>
+          <p>I refuse to grow up! I am passionate about <strong>Video Games!</strong></p>
+        </div>
+      </div>
+
+      <div class="card-white text-center">
+        <h2>Follow me!</h2>
+
+        <ul class="list-inline">
+          <li><a href="#" class="social-icon"><i class="fab fa-github"></i></a></li>
+          <li><a href="#" class="social-icon"><i class="fab fa-facebook-square"></i></a></li>
+          <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,13 +1,31 @@
+/* TODO: design your profile with CSS */
+@import url('https://kit.fontawesome.com/63cc736e51.js');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 h1 {
   color: #325288;
-  background: #f4eee8
-  size: 30px;
+  size: 50px;
   font-family: 'poppins';
 }
 
 h2 {
   font-family: 'poppins';
   color: #114e60;
+  size: 30px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #114E60;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: #fb3640;
 }
 
 body {
@@ -15,12 +33,236 @@ body {
   background: #f4eee8;
 }
 
-a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #114E60;
+
+.card-white {
+    padding: 32px;
+    margin: 32px auto;
+    background: white;
+    box-shadow: 0px 5px 15px rgb(0 0 0 / 10%);
+    width: 800px;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
 }
 
-a:hover {
-  color: #fb3640;
+.card-center {
+    padding: 32px;
+    margin: 32px auto;
+    background: white;
+    box-shadow: 0px 5px 15px rgb(0 0 0 / 10%);
+    width: 200px;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+    width: 236px;
+    margin: inherit;
+
+    --opacity: .25;
 }
+
+.card-center.coding::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url(images/code.jpg);
+    background-size: cover;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+}
+
+.card-center.coding {
+    z-index: 1;
+}
+
+.card-center.coding:hover::before,
+.card-center.coding:focus::before {
+  opacity: var(--opacity);
+}
+
+.card-center.ski::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url(images/ski.jpg);
+    background-size: cover;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+}
+
+.card-center.ski {
+    z-index: 1;
+}
+
+.card-center.ski:hover::before,
+.card-center.ski:focus::before {
+  opacity: var(--opacity);
+}
+
+.card-center.game::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url(images/game.jpg);
+    background-size: cover;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+}
+
+.card-center.game {
+    z-index: 1;
+}
+
+.card-center.game:hover::before,
+.card-center.game:focus::before {
+  opacity: var(--opacity);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.img-circle {
+    width: 350px;
+    box-shadow: 5px 5px 3px grey;
+    border-radius: 175px;
+    margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-blue {
+  background: #325288;
+  color: white;
+  padding: 8px 24px;
+  box-shadow: 0px 2px 5px rgb(0 0 0 / 10%);
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.btn-blue:hover {
+  background: #fb3640;
+  color: white;
+  box-shadow: 0px 5px 15px rgb(0 0 0 / 10%);
+  padding: 8px 24px;
+  border-radius: 4px;
+}
+
+.list-inline {
+  list-style: none;
+  padding: 0;
+}
+
+.list-inline li {
+  display: inline-block;
+}
+
+.social-icon {
+  font-size: 48px;
+  color: rgb(230, 230, 230);
+  margin: 8px 24px;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 800px;
+}
+
+@media (max-width: 960px) {
+  .container {
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .flex-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+/*    margin: 20px;*/
+  }
+
+  .card-center {
+    width: 700px;
+    margin: 16px;
+  }
+
+  .card-white {
+    margin: 26px 0px 15px 0px;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .flex-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+/*    margin: 20px;*/
+  }
+
+  .card-center {
+    width: 500px;
+    margin: 16px ;
+  }
+
+  .card-white {
+    margin: 26px 0px 15px 0px;
+  }
+}
+@media (max-width: 540px) {
+  .container {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .flex-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+/*    margin: 20px;*/
+  }
+
+  .card-center {
+    width: 430px;
+    margin: 16px;
+
+  }
+
+  .card-white {
+    margin: 26px 0px 15px 0px;
+  }
+}
+
+
